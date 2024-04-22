@@ -1,0 +1,15 @@
+{
+  "name": "activeagenda",
+  "version": "1.0.0",
+  "description": "ActiveAgenda is a fitness tracker and a task tracker all in one. So that everything that needs done stays in one place",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "6.5"
+  }
+}

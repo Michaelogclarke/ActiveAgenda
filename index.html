@@ -7,12 +7,21 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="header">
+      <h2>To-do List <img id="Todo_icon" src="Images/todo icon.png" /></h2>
+    </div>
     <div class="container">
-      <div class="todo-app">
-        <h2>To-do List <img id="Todo_icon" src="Images/todo icon.png" /></h2>
+      <div class="todos">
         <div class="row">
-          <input type="text" id="input-box" placeholder="Add your text" />
-          <button onclick="addTask()">Add</button>
+          <!-- <input type="text" id="input-box" placeholder="Add your text" /> -->
+          <button onclick="toggleForm()">Add</button>
+          <form id="myForm">
+            <label for="fname">First Name:</label><br />
+            <input type="text" id="fname" name="fname" /><br />
+            <label for="lname">Last Name:</label><br />
+            <input type="text" id="lname" name="lname" /><br /><br />
+            <input type="submit" value="Submit" />
+          </form>
         </div>
         <ul id="list-container"></ul>
       </div>
