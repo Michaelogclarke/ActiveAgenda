@@ -1,24 +1,15 @@
 const { MongoClient } = require("mongodb");
+const mongoose = require("mongoose");
 
-// Replace the uri string with your connection string.
-const uri =
-  "mongodb+srv://michaelogclarke:Michaelog5106@activeagenda.dn3tprb.mongodb.net/?retryWrites=true&w=majority&appName=ActiveAgenda";
+const connecteionURI = process.env.MONGODB_URI;
 
-const client = new MongoClient(uri);
+mongoose
+  .connect(connecteionURI, {
+    /* options */
+  })
+  .then(() => console.log("MongoDB connnected"))
+  .catch((err) => console.error(err));
 
-async function run() {
-  try {
-    const database = client.db("sample_mflix");
-    const movies = database.collection("movies");
-
-    // Query for a movie that has the title 'Back to the Future'
-    const query = { title: "Back to the Future" };
-    const movie = await movies.findOne(query);
-
-    console.log(movie);
-  } finally {
-    // Ensures that the client will close when you finish/error
-    await client.close();
-  }
-}
-run().catch(console.dir);
+const taskSchema = new mongoose.taskSchema({
+  todo: String,
+});
