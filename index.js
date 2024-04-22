@@ -1,5 +1,4 @@
 const { MongoClient } = require("mongodb");
-const mongoose = require("mongooose");
 
 // Replace the uri string with your connection string.
 const uri =
@@ -9,13 +8,17 @@ const client = new MongoClient(uri);
 
 async function run() {
   try {
-    await mongoose.connect(uri);
-    console.log("Connected to Mongo");
+    const database = client.db("sample_mflix");
+    const movies = database.collection("movies");
+
+    // Query for a movie that has the title 'Back to the Future'
+    const query = { title: "Back to the Future" };
+    const movie = await movies.findOne(query);
+
+    console.log(movie);
   } finally {
     // Ensures that the client will close when you finish/error
     await client.close();
   }
 }
-
-connect();
 run().catch(console.dir);
