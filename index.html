@@ -7,16 +7,21 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="todo-app">
+    <div class="header">
+      <div class="todos">
         <h2>To-do List <img id="Todo_icon" src="Images/todo icon.png" /></h2>
         <div class="row">
           <input type="text" id="input-box" placeholder="Add your text" />
-          <button onclick="addTask()">Add</button>
+          <button onclick="showForm(),addtask()">Add</button>
         </div>
         <ul id="list-container"></ul>
       </div>
     </div>
     <script src="script.js"></script>
+    <script>
+      function showForm() {
+        document.getElementById("input-box").style.display = "block";
+      }
+    </script>
   </body>
 </html>
