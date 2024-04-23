@@ -75,12 +75,25 @@
   cursor: pointer;
   border-radius: 40px;
 }  */
-button {
+#formbtn {
   border: none;
   outline: none;
   color: #fff;
 }
-button:hover {
+#formbtn:hover {
+  display: block;
+  color: orangered;
+  cursor: pointer;
+}
+#taskbtn {
+  display: none;
+  border: none;
+  outline: none;
+  color: #fff;
+}
+
+#taskbtn:hover {
+  display: block;
   color: orangered;
   cursor: pointer;
 }
