@@ -59,7 +59,7 @@
   background: transparent;
   padding: 10px;
 } */
-button {
+/* button {
   border: none;
   outline: none;
   padding: 16px 50px;
@@ -68,6 +68,14 @@ button {
   font-size: 16px;
   cursor: pointer;
   border-radius: 40px;
+} */
+button {
+  border: none;
+  outline: none;
+}
+button:hover {
+  color: orangered;
+  cursor: pointer;
 }
 ul li {
   list-style: none;
