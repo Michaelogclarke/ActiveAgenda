@@ -37,3 +37,6 @@ function showTask() {
   listContainer.innerHTML = localStorage.getItem("data");
 }
 showTask();
+
+async fucntion fetchTodos() {
+  const response = await fetch('/todo')
