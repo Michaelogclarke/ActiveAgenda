@@ -1,5 +1,5 @@
 //Fetch Todos
-fetch("/todos")
+fetch("/Todos")
   .then((response) => response.json())
   .then((todos) => {
     // Rendering todos

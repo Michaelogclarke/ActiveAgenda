@@ -6,7 +6,7 @@ const Todo = require("./models/todo");
 
 //Mongodb connection
 const uri =
-  "mongodb+srv://michaelogclarke:Michaelog5106@activeagenda.dn3tprb.mongodb.net/?retryWrites=true&w=majority&appName=ActiveAgenda"; // MongoDB connection URI
+  "mongodb+srv://michaelogclarke:Michaelog5106@activeagenda.dn3tprb.mongodb.net/"; // MongoDB connection URI
 const client = new MongoClient(uri);
 //Server connect for mongodb
 client.connect((err) => {
